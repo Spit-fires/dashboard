@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 15px 14px;
+      background-color: darkgreen;
+      font-family: inherit;
+      margin: 0;
+    }
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: limegreen;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: limegreen;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: limegreen;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      </style>
+<body>
+<div class="navbar">
+  <a href="index.html">Dashboard</a>
+  <div class="dropdown">
+    <button class="dropbtn">Economy</button>
+    <div class="dropdown-content">
+      <a href="/src/docs/eco/starting.html">Starter</a>
+      <a href="src/docs/eco/ambling.html">Gambling</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Settings and Utility</button>
+    <div class="dropdown-content">
+      <a href="/src/docs/utility/basic.html">Basic</a>
+      <a href="src/docs/utility/advanced.html" >Advanced</a>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
