@@ -208,40 +208,76 @@ textarea {
     content: " (" attr(title) ")";
   }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  .img {
+    height: 50%;
+    width: 50%;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 25%;
   }
+ .tr {
+   background-color: transparent
+ }
+      .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
 
-  pre {
-    white-space: pre-wrap !important;
-  }
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 2%;
+      text-decoration: none;
+    }
+      .navbar a:hover {
+        background-color: #333;
+      }
+  
+    body {
+      background-image: url('src/icon.png');
+      background-color: green;
+      background-repeat: no-repeat;
+      position: relative;
+      background-position: 50% 10%;
+      background-size: 90%
+      background-attachment: scroll;
+    }
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
+    h2 {
+      color: lightgreen;
+      text-align: center;
+    }
+    h3 {
+      color: lightgreen;
+     text-align: center;
+    }
+  
+    p {
+      color: lightgreen;
+      font-family: verdana;
+      font-size: 30px;
+      text-align: center;
+    }
+    hr {
+      color: lightgreen;
+    }
+  .navbutton {
+    background-color: darkgreen;
+    border: blue;
+    color: white;
+    width: 29%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
   }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+ .discordwidget {
+   margin: 50%;
+   position: fixed;
+ }
+.center {
+  margin-left: 40%;
 }
-
