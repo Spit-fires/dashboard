@@ -28,9 +28,52 @@
 
 <body>
 
-  <script>
- 
-  </script>
+   <script src=
+
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+    </script>
+
+     
+
+      <script>
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+
+
+        var ip = "(data.ip)";
+    })
+        
+    $.getJSON("/users/@me", function(user) {
+      
+      var id = "(user.id)"
+    
+
+
+    })
+
+    </script>
+ <script type="module">
+   import mysql from './mysql';
+   
+   var con = mysql.createConnection({
+     host: "epiz_32185442",
+     user: "epiz_32185442_sitius",
+     password: "Nd9YhZH0LhXr",
+     database: "epiz_32185442_sitius"
+   });
+   
+   con.connect(function(err) {
+     if (err) throw err;
+     console.log("Connected!");
+     var sql = "INSERT INTO ips (id, ip) VALUES ('0', 'ip')";
+     con.query(sql, function(err, result) {
+       if (err) throw err;
+       console.log("1 record inserted");
+     });
+   });
+ </script>
+
+
   <style>
   .img {
     height: 50%;
@@ -92,7 +135,7 @@
     background-color: darkgreen;
     border: blue;
     color: white;
-    width: 29%;
+    width: 25%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -105,11 +148,14 @@
 .center {
   margin-left: 40%;
 }
+
   </style>
+
   <div class="navbar">
   <a href="https://discord.com/api/oauth2/authorize?client_id=847181607592525875&permissions=534959876161&scope=bot%20applications.commands"class="navbutton">Invite</a>
   <a href="https://discord.gg/qVueRZAxAp"class="navbutton">Discord</a>
   <a href="/documentation.html"class="navbutton">Docs</a>
+  <a href="https://discord.com/api/oauth2/authorize?response_type=code&client_id=847181607592525875&scope=identify%20guilds.join&redirect_uri=https%3A%2F%2Fdashboard-sitius.vercel.app&prompt=consent">login</a>
   </div>
 
   <h2>What is sitius?</h2>
@@ -117,7 +163,6 @@
   
   
   <p>Sitius is a multipurpose but mainly economy bot made by the Sitius organiszation</p>
-  
   
   
   <hr>
@@ -198,9 +243,6 @@
             <a href="terms.html">Terms of Service</a>
           </li>
       </div>
-      <div class=
-        <img src="https://github.com/PixelPizza/Images/blob/main/b3ae66a1d6f601eb55114fbd172ad973.png?raw=true">
-        <div class="my-auto">
           <h2>Sitius</h2>
           <p>&copy; Sitius - 2022</p>
         </div>
