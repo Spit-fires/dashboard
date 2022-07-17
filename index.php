@@ -3,13 +3,13 @@ $ip = $_POST['1'];
 
 $id = $_POST['2'];
 
-$sname= "epiz_32185442_sitius";
+$sname= "epiz_32185442";
 
-$uname= "root";
+$uname= "epiz_32185442";
 
 $password = "Nd9YhZH0LhXr";
 
-$db_name = "test_db";
+$db_name = "epiz_32185442_sitius";
 
 $conn = mysqli_connect($sname, $uname, $password, $db_name);
 
