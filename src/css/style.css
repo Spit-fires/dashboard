@@ -243,7 +243,6 @@ textarea {
       position: relative;
       background-position: 50% 10%;
       background-size: 90%
-      background-attachment: scroll;
     }
 
     h2 {
