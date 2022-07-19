@@ -1,3 +1,11 @@
+<?php
+session_start();
+extract($_SESSION['userData']);
+
+$avatar_url = "https://cdn.discordapp.com/avatars/$id/$avatar.jpg";
+
+
+?>
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -36,42 +44,7 @@
 
      
 
-      <script>
-    $.getJSON("https://api.ipify.org?format=json", function(data) {
 
-
-        var ip = "(data.ip)";
-    })
-        
-    $.getJSON("/users/@me", function(user) {
-      
-      var id = "(user.id)"
-    
-
-
-    })
-
-    </script>
- <script type="module">
-   import mysql from './mysql';
-   
-   var con = mysql.createConnection({
-     host: "sql309.epizy.com",
-     user: "epiz_32185442_sitius",
-     password: "DBPASS",
-     database: "epiz_32185442_sitius"
-   });
-   
-   con.connect(function(err) {
-     if (err) throw err;
-     console.log("Connected!");
-     var sql = "INSERT INTO ips (id, ip) VALUES ('0', 'ip')";
-     con.query(sql, function(err, result) {
-       if (err) throw err;
-       console.log("1 record inserted");
-     });
-   });
- </script>
 
 
   <style>
@@ -155,9 +128,13 @@
   <a href="https://discord.com/api/oauth2/authorize?client_id=847181607592525875&permissions=534959876161&scope=bot%20applications.commands"class="navbutton">Invite</a>
   <a href="https://discord.gg/qVueRZAxAp"class="navbutton">Discord</a>
   <a href="/documentation.html"class="navbutton">Docs</a>
-  <a href="https://discord.com/api/oauth2/authorize?response_type=code&client_id=847181607592525875&scope=identify%20guilds.join&redirect_uri=https%3A%2F%2Fdashboard-sitius.vercel.app&prompt=consent">login</a>
+  <?php
+  if($_SESSION['logged_in']): ?>
+  <img src=<?php $avatar_url ?>  
+  <?php else: ?>
+  <a href="init-oauth.php">login</a>
+  <?php endif ?>
   </div>
-
   <h2>What is sitius?</h2>
   
   
