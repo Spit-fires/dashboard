@@ -1,0 +1,20 @@
+{
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.5.1"
+    },
+
+    "api/index.php": {
+      "runtime": "vercel-php@0.5.1"
+    },
+    "api/init-oauth.php": {
+      "runtime": "vercel-php@0.5.1"
+    },
+    "api/process-oauth.php": {
+      "runtime": "vercel-php@0.5.1"
+    },
+    "api/validated-oauth.php": {
+      "runtime": "vercel-php@0.5.1"
+    }
+  }
+}

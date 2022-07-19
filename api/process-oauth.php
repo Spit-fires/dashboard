@@ -68,6 +68,6 @@ $_SESSION['userData'] = [
     'avatar'=>$result['avatar'],
 ];
 
-header("location: validated-oauth.php");
+header("location: /api/validated-oauth.php");
 exit();
 ?>
