@@ -132,7 +132,7 @@ $avatar_url = "https://cdn.discordapp.com/avatars/$id/$avatar.jpg";
   if($_SESSION['logged_in']): ?>
   <img src=<?php $avatar_url ?>  
   <?php else: ?>
-  <a href="init-oauth.php">login</a>
+  <a href="/api/init-oauth.php">login</a>
   <?php endif ?>
   </div>
   <h2>What is sitius?</h2>
